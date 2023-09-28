@@ -39,7 +39,8 @@ local esp = {
         viewangle = {enabled = false, size = 6, color = Color3fromRGB(255, 255, 255)},
         skeleton = {enabled = false, color = Color3fromRGB(255, 255, 255)},
         tracer = {enabled = false, origin = "Middle", color = Color3fromRGB(255, 255, 255)},
-        arrow = {enabled = false, radius = 100, size = 25, filled = false, transparency = 1, color = Color3fromRGB(255, 255, 255)}
+        arrow = {enabled = false, radius = 100, size = 25, filled = false, transparency = 1, color = Color3fromRGB(255, 255, 255)},
+        weapon = {enabled = false, outline = true, color = Color3fromRGB(255, 255, 255)}
     },
     settings_chams = {
         enabled = false,
