@@ -115,14 +115,14 @@ esp.TeamCheck = function(v)
     return true
 end
 
-local function getCurrentGun(player)
-    local currentSelectedObject = tostring(player.CurrentSelectedObject.Value)
+local function getCurrentGun(v)
+    local currentSelectedObject = tostring(v.CurrentSelectedObject.Value)
     local success, currentGun = pcall(function()
-        return player.GunInventory[currentSelectedObject].Value
+        return v.GunInventory[currentSelectedObject].Value
     end)
 
     if not success or not currentGun then
-        for _, gun in pairs(player.GunInventory:GetChildren()) do
+        for _, gun in pairs(v.GunInventory:GetChildren()) do
             if gun.Value == currentSelectedObject then
                 currentGun = gun
                 break
@@ -305,7 +305,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
                 end
                 v.arrow.Visible = false
                 if esp.settings.weapon.enabled then
-                    local gun = getCurrentGun(v)
+                    local gun = getCurrentGun(i)
                     v.weapon.Visible = true
                     v.weapon.Position = Vector2new(BoxSize.X + BoxPos.X + v.weapon.TextBounds.X / 2 + 3, BoxPos.Y - 3)
                     v.weapon.Outline = esp.settings.name.outline
@@ -314,7 +314,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
                     v.weapon.Font = esp.font
                     v.weapon.Size = esp.fontsize
 
-                    v.weapon.Text = "\n[" .. tostring(gun) .. "]"
+                    v.weapon.Text = v.weapon.Text .."\n[" .. tostring(gun) .. "]"
                 else
                     v.weapon.Visible = false
                 end
