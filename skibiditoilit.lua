@@ -305,7 +305,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
                 end
                 v.arrow.Visible = false
                 if esp.settings.weapon.enabled then
-                    local gun = getCurrentGun(player)
+                    local gun = getCurrentGun(v)
                     v.weapon.Visible = true
                     v.weapon.Position = Vector2new(BoxSize.X + BoxPos.X + v.weapon.TextBounds.X / 2 + 3, BoxPos.Y - 3)
                     v.weapon.Outline = esp.settings.name.outline
