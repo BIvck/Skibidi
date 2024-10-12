@@ -27,7 +27,7 @@ local esp = {
     enabled = false,
     teamcheck = false,
     fontsize = 13,
-    font = 2,
+    font = 3,
     maxdist = 0,
     settings = {
         name = {enabled = false, outline = true, displaynames = false, color = Color3fromRGB(255, 255, 255)},
