@@ -7,7 +7,6 @@
  end
  
  ---// Variables
- local Camera = game:GetService("Workspace").Camera
  local RunService = game:GetService("RunService")
  local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
  local InputService = game:GetService("UserInputService")
