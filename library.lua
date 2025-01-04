@@ -1,4 +1,4 @@
- repeat
+repeat
     task.wait()
  until game:IsLoaded()
  
@@ -32,7 +32,7 @@
  
  local library = {
     Title = 'anti.font color="rgb(245, 66, 230)">solutions</font> | <font color="rgb(245, 66, 230)">Pre-Build</font>',
-    Build = 'build: font color="rgb(245, 66, 230)"> Unknown </font>'
+    Build = 'build: font color="rgb(245, 66, 230)"> Unknown </font>',
     AnimatedText = false,
     keybind = Enum.KeyCode.End,
     Colors = {
