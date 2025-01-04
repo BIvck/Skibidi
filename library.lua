@@ -32,7 +32,7 @@ repeat
  
  local library = {
     Title = 'anti.font color="rgb(245, 66, 230)">solutions</font> | <font color="rgb(245, 66, 230)">Pre-Build</font>',
-    Build = 'build: font color="rgb(245, 66, 230)"> Unknown </font>',
+    Build = 'build: <font color="rgb(245, 66, 230)"> Unknown </font>',
     AnimatedText = false,
     keybind = Enum.KeyCode.End,
     Colors = {
@@ -92,11 +92,6 @@ repeat
 
 
  task.spawn(function()
-    for _, obj in pairs(menu:GetDescendants()) do
-        if obj.Name:lower():find('buildlabel') then
-            obj.Text = library.Build
-        end
-     end
     local textList = {
         -- Bozos
         'G', 'Ga', 'Gay',
@@ -111,6 +106,11 @@ repeat
         'Made By: l', 'Made By:', 'Made By', 'Made B', 'Made', 'Mad', 'Ma', 'M'
     }
     while wait(0.2) do
+        for _, obj in pairs(menu:GetDescendants()) do
+            if obj.Name:lower():find('buildlabel') then
+                obj.Text = library.Build
+            end
+         end
         if library.AnimatedText then
             for i = 1, #textList do
                 menu.bg.pre.Text = textList[i]
