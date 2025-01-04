@@ -90,13 +90,13 @@ repeat
  ScreenGui.Name = "huh_menu"
  menu.bg.pre.Text = ""
 
- for _, obj in pairs(menu:GetDescendants()) do
-    if obj.Name:lower():find('buildlabel') then
-        obj.Text = library.Build
-    end
- end
 
  task.spawn(function()
+    for _, obj in pairs(menu:GetDescendants()) do
+        if obj.Name:lower():find('buildlabel') then
+            obj.Text = library.Build
+        end
+     end
     local textList = {
         -- Bozos
         'G', 'Ga', 'Gay',
